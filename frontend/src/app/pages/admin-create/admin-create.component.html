@@ -1,0 +1,44 @@
+<!-- <div class="container py-4">
+  <h4>Create Quiz (Admin)</h4>
+  <form (ngSubmit)="submit()" [formGroup]="form">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input class="form-control" formControlName="title" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <input class="form-control" formControlName="description" />
+    </div>
+    <div formArrayName="questions">
+      <div *ngFor="let q of questions.controls; let i = index" [formGroupName]="i" class="card mb-3 p-3">
+        <div class="d-flex justify-content-between">
+          <h6>Question {{ i + 1 }}</h6>
+          <button class="btn btn-sm btn-danger" type="button" (click)="removeQuestion(i)">Remove</button>
+        </div>
+
+        <div class="mb-2">
+          <input class="form-control" placeholder="Question text" formControlName="text" />
+        </div>
+
+        <div formArrayName="options">
+            <div *ngFor="let opt of questions.controls[i].get('options')?.controls; let j = index" class="input-group mb-2">
+              <span class="input-group-text">Option {{ j + 1 }}</span>
+              <input class="form-control" [formControlName]="j" />
+            </div>
+          <button class="btn btn-sm btn-outline-secondary mb-2" type="button" (click)="addOption(i)">Add option</button>
+        </div>
+
+        <div class="mb-2">
+          <label>Correct Option Index</label>
+          <input type="number" class="form-control" formControlName="correctIndex" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <button class="btn btn-outline-primary" type="button" (click)="addQuestion()">Add Question</button>
+    </div>
+
+    <button class="btn btn-success" type="submit">Create Quiz</button>
+  </form>
+</div> -->
