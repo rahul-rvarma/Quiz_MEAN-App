@@ -33,12 +33,8 @@ GET  /api/quiz/:id/questions   -> returns questions (no correctIndex)
 POST /api/quiz/:id/submit      -> submit answers
 Body: { answers: [0,1,2,...] } (indices per question)
 
-## Example: Submit answers (curl)
-curl -X POST http://localhost:4000/api/quiz/<QUIZ_ID>/submit \
- -H "Content-Type: application/json" \
- -d '{"answers":[2,1,1,1,2]}'
 
-## Notes / Interview talking points
+## Notes  points
 - Validation with Joi + database modelling with Mongoose.
 - JWT-based auth for protected endpoints.
 - Seed script included to demo a ready quiz quickly.
